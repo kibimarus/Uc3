@@ -22,8 +22,7 @@ body{
     border:2px solid black;
     padding: 30px;
     background: white;
-    text-align: center;
-    width: 30%;
+    width: 40%;
     text-align: center;
     gap:  15px;
 }
@@ -44,7 +43,7 @@ body{
     justify-content: center;
     text-align: center;
 
-    gap: 10;
+    gap: 15px;
 }
 #escolha{
     font-size: 30px ;
@@ -61,12 +60,14 @@ body{
     justify-content: center;
     align-items: center;
 /* ? Distancia entre as imagens */
-    gap: 10px;
+    gap: 20px;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all 0.10s;
+
 }
 .card:hover{
     border: 2px solid black;
+    background-color: rgb(221, 221, 221);
 }
 
 .card h2{
@@ -76,6 +77,6 @@ body{
 }
 /* Diminuir o tamanho das imgs */
 .card img{
-    width: 100px;
+    width: 150px;
 }
  
