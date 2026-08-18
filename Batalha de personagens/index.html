@@ -8,23 +8,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1> Bem-vindo a (nome a inserir)</h1>
-    <div class="placar">
-        <h2 id="pontos-jogador">Seus pontos: 0</h2>
-        <h2 id="pontos-maquina">Máquina pontos: 0</h2>
-    </div>
-    <h1 id="escolha">Escolha seu personagem!</h1>
+    <div class="game">
+        <h1> Bem-vindo a Batalha de Herois!</h1>
+        <div class="placar">
+            <h1 id="pontos-jogador">Seus pontos: 0</h2>
+            <h1 id="pontos-maquina">Máquina pontos: 0</h2>
+        </div>
+        <h1 id="escolha">Escolha seu personagem!</h1>
 
-    <div class="personagem">
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
-        <div class="opcoes"></div>
+        <div class="personagem">
+            <div class="card" onclick="jogar('Arqueiro')">
+                <img src="img/ARQUEIRO.jpg" alt="">
+                <h2>Arqueiro</h2>
+            </div>
+            <div class="card" onclick="jogar('Guerreiro')">
+                <img src="img/guerreiro.jpg" alt="">
+                <h2>Guerreiro</h2>
+            </div>
+            <div class="card" onclick="jogar('Ladino')">
+                <img src="img/ladino.jpg" alt="">
+                <h2>Ladino</h2>
+            </div>
+            <div class="card" onclick="jogar('Mago')">
+                <img src="img/mago.jpg" alt="">
+                <h2>Mago</h2>
+            </div>
+            <div class="card" onclick="jogar('Paladino')">
+                <img src="img/paladino.jpg" alt="">
+                <h2>Paladino</h2>
+            </div>
+    
         
+        </div>
     </div>
 
     <script src="js/script.js"></script>
