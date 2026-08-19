@@ -1,86 +1,210 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
-    /* ^ Controle total do tamanho das <tags> */
     box-sizing: border-box;
-    }
-    body{
-        background-image: url(https://wallpaperaccess.com/full/1611219.jpg);
-        font-family: "Uncial Antiqua", system-ui;
-        font-weight: 400;
-        font-style: normal;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-     
-        
-    }
-    .game{
-    /* Placar e cartas um em baixo do outro */
-        display: flex;
-        flex-direction: column;
-        border-radius: 50px;
-        /* border:2px solid rgba(255, 234, 195, 0.356); */
-        padding: 60px;
-        /* background: rgba(255, 255, 255, 0.459); */
-        text-align: center;
-        width: 80%;
-        gap: 15px;
-        font-size: 10px ;
-    }
-    .game>h1{
-        font-size: 90px;
-        letter-spacing: 2px;
-    }
-    #pontosjogador{
-        color:rgba(87, 199, 167, 1);
-        text-transform:uppercase;
-     
-    }
-    #pontosmaquina{
-        color:rgba(119, 86, 229, 0.98);
-        text-transform:uppercase;
-    }
-    #escolha{
-        font-size: 30px;
-    }
-    .cartas{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: center;
-    }
-    /* Diminuir o tamanho das imgs */
-    .card img{
-        width: 200px;
-    }
-    .card{
-        /* FORMATO
-        CENTRALIZAR (X E Y) DA IMAGEM E O NOME DA CARTA */
-        padding: 50px;
-        border: 1px solid black;
-        border-radius: 30px;
-        width: 45%;
-        height: 350px;
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        /* DISTANCIA ENTRE IMG E H2 */
-        justify-content: center;
-        gap: 20px;
-        cursor: pointer;
-        transition: all 0.4s;
-    }
-    .card :hover{
-        border: 2px solid transparent;
-    }
-    .card h2{
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 22px;
-    }
-    .personagem{
-        display: inline-flex;
-    }
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url(https://wallpaperaccess.com/full/1611219.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+
+   /*? ÁREA PRINCIPAL */
+
+
+.game {
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px;
+
+    text-align: center;
+
+    width: 90%;
+    max-width: 1400px;
+
+    gap: 20px;
+}
+
+   /*? TÍTULOS */
+
+
+.game > h1 {
+    font-size: 70px;
+    letter-spacing: 2px;
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(73, 36, 15);
+
+    text-shadow:
+        3px 3px 5px black,
+        0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+#escolha {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+   /*? PERSONAGENS */
+
+
+.personagem {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+   /* ? CARD */
+
+.card {
+    position: relative;
+
+    width: 210px;
+    height: 320px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: black;
+
+    transition: 
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border 0.4s ease;
+}
+
+
+   /* ? IMAGEM */
+
+.card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 50%;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.9)
+    );
+
+    pointer-events: none;
+}
+
+   /* ? NOME DO PERSONAGEM */
+
+.card h2 {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 20px;
+    left: 0;
+
+    width: 100%;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    font-size: 24px;
+
+    color: white;
+
+    text-shadow:
+        2px 2px 4px black,
+        0 0 10px black;
+}
+
+   /* ? HOVER DO CARD */
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(255, 255, 255, 0.35);
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+   /*? PLACAR */
+
+.placar {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 200, 137, 0.45);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(5px);
+}
+
+.placar h1 {
+    font-size: 20px;
+
+    margin: 8px;
+
+    letter-spacing: 2px;
+}
+
+#pontos-jogador {
+    color: rgb(51, 26, 19);
+    text-transform: uppercase;
+}
+
+#pontos-maquina {
+    color: rgba(59, 35, 19, 0.98);
+    text-transform: uppercase;
+}

@@ -143,10 +143,30 @@ function quemVenceu(jogadaP, jogadaM){
 }
 function atualizaPlacar(){
 
-
+    // ? o innerhtml não está funcionando// ver oq é
     tagPontosPlayer.innerHTML =
         "Player Pontos: " + pontosPlayer
 
     tagPontosCPU.innerHTML =
         "Máquina Pontos: " + pontosMaquina
+        
+        verificaFimDeJogo()
+}
+  
+function verificaFimDeJogo() {
+    if (pontosPlayer >= 5) {
+        alert("O PLAYER venceu a partida!")
+        resetarJogo()
+    } else if (pontosMaquina >= 5) {
+        alert("A MÁQUINA venceu a partida!")
+        resetarJogo()
+    }
+}
+ 
+function resetarJogo() {
+    pontosPlayer = 0
+    pontosMaquina = 0
+ 
+    tagPontosPlayer.innerHTML = "Player Pontos: 0"
+    tagPontosCPU.innerHTML = "Máquina Pontos: 0"
 }

@@ -54,6 +54,7 @@ body{
     border-radius: 5px;
     width: 25%;
     height: 250px;
+    background-image: ;
 /* ? Centralizar (x e y) da imagem e nome da carta */
     display: flex;
     flex-direction: column;
