@@ -149,9 +149,10 @@ function atualizaPlacar(){
 
     tagPontosCPU.innerHTML =
         "Máquina Pontos: " + pontosMaquina
-        
+
         verificaFimDeJogo()
 }
+
   
 function verificaFimDeJogo() {
     if (pontosPlayer >= 5) {
