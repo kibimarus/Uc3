@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ RELAMPAGO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1> Bem-vindo ao Quiz relâmpago! </h1>
+
+    <h2>Responda com sabedoria:</h2>
+    <h2>Quem é o principe mestiço? </h2>
+    <div class="resposta">
+            <div class="card" onclick="responder('correta')">
+                <!-- <img src="img/ARQUEIRO.jpg" alt=""> -->
+                <h2>Hagrid</h2>
+            </div>
+            <div class="card" onclick="responder('errada1')">
+                <!-- <img src="img/guerreiro.jpg" alt=""> -->
+                <h2>resposta2</h2>
+            </div>
+            <div class="card" onclick="responder('errada2')">
+                <!-- <img src="img/ladino.jpg" alt=""> -->
+                <h2>resposta3</h2>
+            </div>
+    </div>
+
+    <div class="placar">
+        <h1 id="pontos"> Pontos: 0</h2>
+    </div>
+
+    <div id="feedback"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
