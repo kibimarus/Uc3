@@ -43,7 +43,7 @@ select:focus{
 }
 
 input:focus{
-    background-color: violet;
+    background-color: rgb(211, 248, 255);
     border-color: rgb(159, 170, 166);
     border-radius: 5px;
     outline: rgb(143, 173, 163);
